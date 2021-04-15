@@ -1,23 +1,27 @@
-// This file is for where you need to add a to do or delete data from your database. One off database stuff.
+//Import The Database Connection
+const mongoose = require("./connection");
 
-// import the database connection
-const mongoose = require("./connection")
+///////////////////////////////////////////
+// IMPORT YOUR MODELS BELOW
+///////////////////////////////////////////
 
-//////////////////////////////////////////
-// Import your models below
-//////////////////////////////////////////
-
-//////////////////////////////////////////
-// Do your database operations in below function
-//////////////////////////////////////////
+///////////////////////////////////////////
+// DO YOUR DATABASE OPERATIONS IN BELOW FUNCTION
+///////////////////////////////////////////
 
 const seed = async () => {
-    // CODE GOES HERE
+  // Drop the Database before seeding
+  mongoose.connection.db.dropDatabase();
 
-    console.log("seed file")
+  //*********Code Goes Here
 
-    // ------------------
-}
+  //***************************** */
 
-// run seed funtion
-seed()
+  mongoose.disconnect();
+};
+
+// Wait for the DB Connection to be Established
+mongoose.connection.on("open", () => {
+  // Run Seed Function
+  seed();
+});

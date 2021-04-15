@@ -18,6 +18,9 @@ const cors = require("cors")
 // bring in our port
 const PORT = process.env.PORT || "2021"
 
+//Import router
+const RestaurantRouter = require("./routes/restaurant")
+
 // create APP object
 const app = express ()
 
@@ -38,7 +41,8 @@ app.use(express.urlencoded({extended: false}))
 ///////////////////////////////////////
 
 //HomeRouter
-app.use("/", HomeRouter);
+app.use("/restaurant", RestaurantRouter)
+app.use("/", RestaurantRouter)
 
 ///////////////////////////////////////
 // App listener

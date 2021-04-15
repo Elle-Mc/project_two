@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- THE HEAD TAG PARTIAL -->
+  <%- include("partials/head") %>
+
+  <body>
+    <!-- THE HEADER TAG PARTIAL -->
+    <%- include("partials/header") %>
+    <main>
+      <!-- *********DISPLAY OUR RESTAURANTS********* -->
+      <h1 class="title">My Restaurants</h1>
+      <a href="/auth/logout"><button class="button">Logout</button></a>
+      <% for (restaurant of restaurants) { %>
+      <h2 class="subtitle is-3"><%= restaurant.text %></h2>
+      <% } %>
+
+      <!-- **********NEW RESTAURANTS FORM**************** -->
+      <form action="/estaurants" method="post">
+        <input type="text" placeholder="new restaurant" name="text" />
+        <input type="submit" value="add goal" />
+      </form>
+    </main>
+    <!-- THE HEAD TAG PARTIAL -->
+    <%- include("partials/footer") %>
+  </body>
+</html>

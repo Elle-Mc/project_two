@@ -5,13 +5,15 @@ const {Schema, model} = require("../db/connection")
 const Restaurant = new Schema({
     name: String,
     location: String, 
+    dish: String,
+    notes: String
 })
 
 // The User Schema
 const UserSchema = new Schema({
     username: {type: String, unique: true, required: true},
     password: {type: String, required: true},
-    // this is importing the above goal schema
+    // this is importing the above restaurant schema
     restaurant: [Restaurant]
 }, {timestamps: true})
 
