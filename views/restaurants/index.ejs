@@ -10,16 +10,25 @@
     <body>
         <!-- THE HEADER TAG PARTIAL -->
         <%- include("../partials/header") %>
-        <h1>Where to Dine for Din</h1>
+        <h1 class="title is-1">Where to Dine for Din</h1>
         <nav>
-          <a href="/restaurants/new">Add a new restaurant</a>
+            <h3 class="title is-3"><a href="/restaurants/new">Add a new restaurant</a></h3><br />
       </nav>
+        <h3 class="title is-3">Here's my list of restaurants to try</h3>
         <ul>
             <% for(let i = 0; i < restaurants.length; i++){ %>
                 <li>
                     I want to go to 
                     <a href="/restaurants/<%=restaurants[i]._id%>">
                         <%=restaurants[i].name;%>
+                    </a>.
+                    It's located at 
+                    <a href="/restaurants/<%=restaurants[i]._id%>">
+                        <%=restaurants[i].location;%>
+                    </a>.
+                    A dish I'd like to try is
+                    <a href="/restaurants/<%=restaurants[i]._id%>">
+                        <%=restaurants[i].dish;%>
                     </a>
                     <a href="/restaurants/<%=restaurants[i]._id %>/edit">Edit</a>
                     <form action="/restaurants/<%=restaurants[i]._id %>?_method=DELETE" method="POST">

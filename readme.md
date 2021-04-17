@@ -14,5 +14,3 @@
 - 🧊 **That's it? What's next?** Planned future enhancements (icebox items).
 
 - **Praise for Where to Dine for Din:**
-
-    

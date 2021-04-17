@@ -42,7 +42,6 @@ app.use(express.urlencoded({extended: false}))
 
 //HomeRouter
 app.use("/restaurants", RestaurantRouter)
-app.use("/", RestaurantRouter)
 
 ///////////////////////////////////////
 // App listener

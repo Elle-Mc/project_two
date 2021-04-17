@@ -6,12 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/style.css">
   <title>Restaurants</title>
+
 </head>
+<!-- THE HEAD TAG PARTIAL -->
+<%- include("../partials/head") %>
+
 <body>
-    <a href="/">Home</a>
+<!-- THE HEADER TAG PARTIAL -->
+<%- include("../partials/header") %>
+    <a href="/restaurants">Home</a>
     <a href="/restaurants">All Restaurants</a>
-    <h1>Restaurant #<%= restaurant._id %></h1>
+    <h1>Restaurant #<%= restaurant.name %></h1>
     <h3><%= restaurant.text %></h3>
-    <h3>Complete: <%= restaurant.done ? 'Yes' : 'No' %></h3>
-</body>
+    <nav>
+      <a href="/restaurants">Back to the home page</a>
+    </nav>
+        <!-- THE HEAD TAG PARTIAL -->
+        <%- include("../partials/footer") %>
+      </body>
 </html>

@@ -4,23 +4,31 @@
     <meta charset="utf-8" />
     <title></title>
   </head>
-  <body>
-    <h1>Edit Restaurant Page</h1>
+  <!-- THE HEAD TAG PARTIAL -->
+  <%- include("../partials/head") %>
+
+<body>
+  <!-- THE HEADER TAG PARTIAL -->
+  <%- include("../partials/header") %>
+    <h2 class="subtitle is-2">You can update this restaurant</h2>
     <!--  NOTE: the form is pre-populated with values for the server-->
     <form action="/restaurants/<%= restaurant._id%>?_method=PUT" method="POST">
       Name:
       <input type="text" name="name" value="<%= restaurant.name %>" /><br /><br />
-      Color:
-      <input type="text" name="color" value="<%= restaurant.color %>" /><br /><br />
-      Is Ready To Eat:
-      <input type="checkbox" name="readyToEat"
-        <% if (restaurant.readyToEat){ %>
-          checked
-        <% } %>
-      />
+      Location:
+      <input type="text" name="location" value="<%= restaurant.location %>" /><br /><br />
+      Dish to try:
+      <input type="text" name="dish" value="<%= restaurant.dish %>" /><br /><br />
+      Notes:
+      <input type="text" name="notes" value="<%= restaurant.notes %>" /><br /><br />
       <br />
       <br />
       <input type="submit" name="" value="Submit Changes">
     </form>
+    <nav>
+      <a href="/restaurants">Back to the home page</a>
+  </nav>
+            <!-- THE HEAD TAG PARTIAL -->
+            <%- include("../partials/footer") %>
   </body>
 </html>

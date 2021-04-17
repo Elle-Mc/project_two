@@ -6,7 +6,6 @@ const RestaurantSchema = new Schema({
     name: String,
     location: String,
     dish: String,
-    notes: String
 })
 
 // The User Schema

@@ -1,7 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Orienta&display=swap" rel="stylesheet');
+
+body {
+  font-family: 'Orienta', sans-serif;  
+  background-color: beige;
+}
+
 h1.title {
   text-align: center;
+  color: darkolivegreen;
 }
 
 h2.subtitle {
   text-align: center;
+  color: darkslateblue;
+}
+
+h3.subtitle {
+  text-align: center;
+  color: darkslategray;
 }
