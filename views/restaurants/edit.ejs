@@ -7,16 +7,16 @@
   <body>
     <h1>Edit Restaurant Page</h1>
     <!--  NOTE: the form is pre-populated with values for the server-->
-    <form action="/restaurants/<%=restaurant.id%>?_method=PUT" method="POST">
+    <form action="/restaurants/<%= restaurant._id%>?_method=PUT" method="POST">
       Name:
       <input type="text" name="name" value="<%= restaurant.name %>" /><br /><br />
       Color:
       <input type="text" name="color" value="<%= restaurant.color %>" /><br /><br />
       Is Ready To Eat:
-      <input type="checkbox" name="readyToEat" 
+      <input type="checkbox" name="readyToEat"
         <% if (restaurant.readyToEat){ %>
-          checked 
-        <% } %> 
+          checked
+        <% } %>
       />
       <br />
       <br />

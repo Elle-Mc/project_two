@@ -40,7 +40,6 @@ const newRestaurant = async (req, res) => {
 
 const create = async (req, res) => {
     try {
-        console.log(req.body)
         const restaurant = new Restaurant({name: req.body.text})
         restaurant.save()
         res.redirect("/restaurants")
@@ -51,15 +50,20 @@ const create = async (req, res) => {
 }
 
 const edit = async (req, res) => {
-    res.render("edit")
+    const id = req.params.id
+    const restaurant = await Restaurant.findById(id)
+    res.render("restaurants/edit", {
+        restaurant
+    })
 }
 
 const update = async (req, res) => {
-    res.render("update")
+
+    res.redirect("/restaurants")
 }
 
 const destroy = async (req, res) => {
-    res.send("destroy")
+    res.redirect("/restaurants")
 }
 
 ///////////////////////////////////////
@@ -68,9 +72,9 @@ const destroy = async (req, res) => {
 module.exports = {
     index,
     show,
-    new: newRestaurant, 
-    create, 
-    edit, 
-    update, 
+    new: newRestaurant,
+    create,
+    edit,
+    update,
     destroy,
 }

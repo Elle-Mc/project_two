@@ -13,6 +13,9 @@ router.get("/", RestaurantController.index);
 // new restaurant
 router.get("/new", RestaurantController.new);
 
+// shows one page of one restaurant
+router.get("/:id", RestaurantController.show);
+
 // post request to create a new restaurant
 router.post("/", RestaurantController.create);
 
@@ -24,9 +27,6 @@ router.get("/:id/edit", RestaurantController.edit);
 
 //index put "/restaurant"
 router.put("/", RestaurantController.update)
-
-// shows one page of one restaurant
-router.get("/:id", RestaurantController.show);
 
 ////////////////////////////////////////
 // Export the router
