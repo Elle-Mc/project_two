@@ -80,7 +80,7 @@ router.post("/auth/login", async (req, res) => {
             const result = await bcrypt.compare(req.body.password, user.password);
             if(result){
                     // add the user ID property to the session object
-                    req.session.userId = user._id
+                    req.session.userId = user.id
                     // redirect
                     res.redirect("/restaurants");
             } else {
