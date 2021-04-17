@@ -16,7 +16,7 @@ const index = async (req, res) => {
     // gets restaurants
     const Restaurants = await Restaurant.find ({});
     // changes view
-    res.render("restaurant/index", {
+    res.render("restaurants/index", {
         restaurants: Restaurants,
     });
 };
@@ -28,19 +28,26 @@ const show = async (req, res) => {
     //grab a restaurant
     const restaurant = await Restaurant.findById(id)
     //renders view
-    res.render("restaurant/show", {
+    res.render("restaurants/show", {
         restaurant
     })
 }
 
 // creates new restaurant
 const newRestaurant = async (req, res) => {
-    res.render("restaurant/new")
+    res.render("restaurants/new")
 }
 
-// creates new restaurant and redirects to index
 const create = async (req, res) => {
-    res.render("create")
+    try {
+        console.log(req.body)
+        const restaurant = new Restaurant({name: req.body.text})
+        restaurant.save()
+        res.redirect("/restaurants")
+    } catch (error) {
+        // send error as json if there is one
+        res.json(error);
+    }
 }
 
 const edit = async (req, res) => {

@@ -2,7 +2,7 @@
 const {Schema, model} = require("../db/connection")
 
 // The Restaurant Schema
-const Restaurant = new Schema({
+const RestaurantSchema = new Schema({
     name: String,
     location: String, 
     dish: String,
@@ -14,13 +14,13 @@ const UserSchema = new Schema({
     username: {type: String, unique: true, required: true},
     password: {type: String, required: true},
     // this is importing the above restaurant schema
-    restaurant: [Restaurant]
+    // restaurant: [RestaurantSchema]
 }, {timestamps: true})
 
-// The User Model 
-const User = model("User", UserSchema)
+// The restaurant Model 
+const Restaurant = model("Restaurant", RestaurantSchema)
 
-// Export the User Model 
-module.exports = User
+// Export the Restaurant Model 
+module.exports = Restaurant
 
 // Models are a way to save data to our database

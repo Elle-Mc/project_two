@@ -41,75 +41,8 @@ app.use(express.urlencoded({extended: false}))
 ///////////////////////////////////////
 
 //HomeRouter
-app.use("/restaurant", RestaurantRouter)
+app.use("/restaurants", RestaurantRouter)
 app.use("/", RestaurantRouter)
-
-// write these out in INDUCES order (index, new, delete, update, create, edit, show)
-
-// INDEX
-app.get('/restaurant', (req, res)=>{
-    Restaurant.find({}, (error, allRestaurants) => {
-        res.render('index.ejs', {
-            restaurants: allRestaurants
-        });
-    });
-});
-
-// NEW
-app.get('/restaurant/new', (req, res)=>{
-    res.render('new');
-});
-
-// DELETE
-app.delete('/restaurant/:id', (req, res)=>{
-    Restaurant.findByIdAndRemove(req.params.id, (err, data)=>{
-        res.redirect('/restaurants');//redirect back to restaurants index
-    });
-});
-
-// UDPATE
-app.put('/restaurant/:id', (req, res)=>{
-    if(req.body.readyToEat === 'on'){
-        req.body.readyToEat = true;
-    } else {
-        req.body.readyToEat = false;
-    }
-    Restaurant.findByIdAndUpdate(req.params.id, req.body, (err, updatedModel)=>{
-        res.redirect('/restaurants');
-    });
-});
-
-// CREATE
-app.post('/restaurant/', (req, res)=>{
-    if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
-        req.body.readyToEat = true;
-    } else { //if not checked, req.body.readyToEat is undefined
-        req.body.readyToEat = false;
-    }
-    Restaurant.create(req.body, (error, createdRestaurant) => {
-        console.log(createdRestaurant) 
-        res.redirect('/restaurant');
-    });
-});
-
-// EDIT
-app.get('/restaurant/:id/edit', (req, res)=>{
-    Restaurant.findById(req.params.id, (err, foundRestaurant)=>{ //find the restaurant
-        res.render(
-    		'edit.ejs',
-    		{
-    			restaurant: foundRestaurant //pass in found restaurant
-    		}
-    	);
-    });
-});
-
-// SHOW
-app.get('/restaurant/:id', (req, res)=>{
-    Restaurant.findById(req.params.id, (err, foundRestaurant)=>{
-        res.render("show", {restaurant: foundRestaurant} );
-    });
-});
 
 ///////////////////////////////////////
 // App listener

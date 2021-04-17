@@ -11,22 +11,22 @@ const Restaurant = require("../models/Restaurant");
 router.get("/", RestaurantController.index);
 
 // new restaurant
-router.get("/restaurant/new", RestaurantController.new);
-
-// delete a restaurant
-router.delete("/restaurant/:id", RestaurantController.destroy);
+router.get("/new", RestaurantController.new);
 
 // post request to create a new restaurant
-router.post("/restaurant/", RestaurantController.create);
+router.post("/", RestaurantController.create);
+
+// delete a restaurant
+router.delete("/:id", RestaurantController.destroy);
 
 // edits restaurant
-router.get("/restaurant/:id/edit", RestaurantController.edit);
+router.get("/:id/edit", RestaurantController.edit);
 
 //index put "/restaurant"
-router.put("/restaurant/", RestaurantController.update)
+router.put("/", RestaurantController.update)
 
 // shows one page of one restaurant
-router.get("/restaurant/:id", RestaurantController.show);
+router.get("/:id", RestaurantController.show);
 
 ////////////////////////////////////////
 // Export the router

@@ -5,20 +5,20 @@
         <title></title>
     </head>
         <!-- THE HEAD TAG PARTIAL -->
-        <%- include("partials/head") %>
+        <%- include("../partials/head") %>
 
     <body>
         <!-- THE HEADER TAG PARTIAL -->
-        <%- include("partials/header") %>
+        <%- include("../partials/header") %>
         <h1>Where to Dine for Din</h1>
         <nav>
-          <a href="/restaurant/new">Add a new restaurant</a>
+          <a href="/restaurants/new">Add a new restaurant</a>
       </nav>
         <ul>
             <% for(let i = 0; i < restaurants.length; i++){ %>
                 <li>
                     The 
-                    <a href="/restaurant/<%=restaurants[i].id;%>">
+                    <a href="/restaurants/<%=restaurants[i]._id%>">
                         <%=restaurants[i].name;%>
                     </a>
                     is  <%=restaurants[i].color; %>.
@@ -27,14 +27,14 @@
                     <% } else { %>
                         It is not ready to eat
                     <% } %>
-                    <a href="/restaurants/<%=restaurants[i].id; %>/edit">Edit</a>
-                    <form action="/restaurant/<%=restaurants[i].id; %>?_method=DELETE" method="POST">
+                    <a href="/restaurants/<%=restaurants[i]._id %>/edit">Edit</a>
+                    <form action="/restaurants/<%=restaurants[i]._id %>?_method=DELETE" method="POST">
                         <input type="submit" value="DELETE"/>
                     </form>
                 </li>
             <% } %>
         </ul>
         <!-- THE HEAD TAG PARTIAL -->
-        <%- include("partials/footer") %>
+        <%- include("../partials/footer") %>
     </body>
 </html>
