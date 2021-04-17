@@ -16,7 +16,7 @@ const index = async (req, res) => {
     // gets restaurants
     const Restaurants = await Restaurant.find ({});
     // changes view
-    res.render("restaurants/index", {
+    res.render("restaurant/index", {
         restaurants: Restaurants,
     });
 };
@@ -28,7 +28,7 @@ const show = async (req, res) => {
     //grab a restaurant
     const restaurant = await Restaurant.findById(id)
     //renders view
-    res.render("restaurants/show", {
+    res.render("restaurant/show", {
         restaurant
     })
 }

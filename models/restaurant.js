@@ -17,7 +17,7 @@ const UserSchema = new Schema({
     restaurant: [Restaurant]
 }, {timestamps: true})
 
-// THe User Model 
+// The User Model 
 const User = model("User", UserSchema)
 
 // Export the User Model 

@@ -5,24 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/style.css">
-  <title>Express To-Do</title>
+  <title>Restaurants to Try</title>
 </head>
-<h1>Todos as of <%= time %></h1>
 <body>
-    <h1>Here Are Your Todos</h1>
+    <h1>Here Are Your Restaurants</h1>
   <ul>
-    <% todos.forEach(function(todo, idx) { %>
+    <% restaurants.forEach(function(restaurant, idx) { %>
       <li>
-        <form action="/todos/<%= idx %>?_method=DELETE"
+        <form action="/restaurants/<%= idx %>?_method=DELETE"
           class="delete-form" method="POST">
           <button type="submit">X</button>
         </form>
-        <a href="/todos/<%= idx %>"><%= todo.text %></a>
+        <a href="/restaurant/<%= idx %>"><%= restaurant.text %></a>
           - 
-        <%= todo.done ? 'Done' : 'Not done' %>
+        <%= restaurant.done ? 'Done' : 'Not done' %>
       </li>
     <% }); %>
   </ul>
-  <a href="/todos/new">Add To-Do</a>
+  <a href="/restaurant/new">Add Restaurant</a>
 </body>
 </html>
