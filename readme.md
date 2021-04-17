@@ -1,13 +1,18 @@
-# READ ME DIRECTIONS
+# Where to Dine for Din
 
-Title and a description of your app. Background info of the app is a nice touch.
+- 🍴 **What is it?** An app to track 
 
-- Screenshot(s): Images of your actual app.
+- 💭 **What's it look like?**
 
-- Technologies Used: List of the technologies used, e.g., JavaScript, HTML, CSS...
 
-- Getting Started: In this section include the link to your deployed app and any instructions you deem important.
+- 🤨 **How'd she make it?**
+    - JavaScript
+    - CSS
 
-- Next Steps: Planned future enhancements (icebox items).
+- 👀 **How do *I* see it?** [Click if you dare](https://where-to-dine-for-din.herokuapp.com/)
 
-Note: Don't underestimate the value of a well crafted README.md. The README.mdintroduces your project to prospective employers and forms their first impression of your work!
+- 🧊 **That's it? What's next?** Planned future enhancements (icebox items).
+
+- **Praise for Where to Dine for Din:**
+
+    

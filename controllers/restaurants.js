@@ -63,6 +63,8 @@ const update = async (req, res) => {
 }
 
 const destroy = async (req, res) => {
+    const id = req.params.id
+    await Restaurant.findByIdAndDelete(id)
     res.redirect("/restaurants")
 }
 
