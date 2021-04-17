@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Restaurant Page</h1>
+    <!--  NOTE: the form is pre-populated with values for the server-->
+    <form action="/restaurant/<%=restaurant.id%>?_method=PUT" method="POST">
+      Name:
+      <input type="text" name="name" value="<%= restaurant.name %>" /><br /><br />
+      Color:
+      <input type="text" name="color" value="<%= restaurant.color %>" /><br /><br />
+      Is Ready To Eat:
+      <input type="checkbox" name="readyToEat" 
+        <% if (restaurant.readyToEat){ %>
+          checked 
+        <% } %> 
+      />
+      <br />
+      <br />
+      <input type="submit" name="" value="Submit Changes">
+    </form>
+  </body>
+</html>

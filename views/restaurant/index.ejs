@@ -1,27 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style.css">
-  <title>Restaurants to Try</title>
-</head>
-<body>
-    <h1>Here Are Your Restaurants</h1>
-  <ul>
-    <% restaurants.forEach(function(restaurant, idx) { %>
-      <li>
-        <form action="/restaurants/<%= idx %>?_method=DELETE"
-          class="delete-form" method="POST">
-          <button type="submit">X</button>
-        </form>
-        <a href="/restaurant/<%= idx %>"><%= restaurant.text %></a>
-          - 
-        <%= restaurant.done ? 'Done' : 'Not done' %>
-      </li>
-    <% }); %>
-  </ul>
-  <a href="/restaurant/new">Add Restaurant</a>
-</body>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+        <!-- THE HEAD TAG PARTIAL -->
+        <%- include("partials/head") %>
+
+    <body>
+        <!-- THE HEADER TAG PARTIAL -->
+        <%- include("partials/header") %>
+        <h1>Where to Dine for Din</h1>
+        <nav>
+          <a href="/restaurant/new">Add a new restaurant</a>
+      </nav>
+        <ul>
+            <% for(let i = 0; i < restaurants.length; i++){ %>
+                <li>
+                    The 
+                    <a href="/restaurant/<%=restaurants[i].id;%>">
+                        <%=restaurants[i].name;%>
+                    </a>
+                    is  <%=restaurants[i].color; %>.
+                    <% if(restaurants[i].readyToEat === true){ %>
+                        It is ready to eat
+                    <% } else { %>
+                        It is not ready to eat
+                    <% } %>
+                    <a href="/restaurants/<%=restaurants[i].id; %>/edit">Edit</a>
+                    <form action="/restaurant/<%=restaurants[i].id; %>?_method=DELETE" method="POST">
+                        <input type="submit" value="DELETE"/>
+                    </form>
+                </li>
+            <% } %>
+        </ul>
+        <!-- THE HEAD TAG PARTIAL -->
+        <%- include("partials/footer") %>
+    </body>
 </html>
