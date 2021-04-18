@@ -12,6 +12,7 @@
   <%- include("../partials/header") %>
     <h2 class="subtitle is-2">You can update this restaurant</h2>
     <!--  NOTE: the form is pre-populated with values for the server-->
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
     <form action="/restaurants/<%= restaurant._id%>?_method=PUT" method="POST">
       Name:
       <input type="text" name="name" value="<%= restaurant.name %>" /><br /><br />
@@ -19,12 +20,9 @@
       <input type="text" name="location" value="<%= restaurant.location %>" /><br /><br />
       Dish to try:
       <input type="text" name="dish" value="<%= restaurant.dish %>" /><br /><br />
-      Notes:
-      <input type="text" name="notes" value="<%= restaurant.notes %>" /><br /><br />
-      <br />
-      <br />
       <input type="submit" name="" value="Submit Changes">
     </form>
+  </div>
     <nav>
       <a href="/restaurants">Back to the home page</a>
   </nav>
