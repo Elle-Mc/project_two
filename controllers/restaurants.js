@@ -58,8 +58,10 @@ const edit = async (req, res) => {
 }
 
 const update = async (req, res) => {
-
-    res.redirect("/restaurants")
+    const id = req.params.id
+    const restaurant = await Restaurant.findByIdAndUpdate(req.params.id, req.body, (err, updateModel)=>{
+        res.redirect("/restaurants")
+    });
 }
 
 const destroy = async (req, res) => {

@@ -11,11 +11,6 @@
         <!-- THE HEADER TAG PARTIAL -->
         <%- include("../partials/header") %>
         <h1 class="title is-1">Where to Dine for Din</h1>
-       
-        
-        <nav>
-            <h3 class="subtitle is-3"><a href="/restaurants/new">Add a new restaurant</a></h3><br />
-      </nav>
         <h3 class="subtitle is-3">Here's my list of restaurants to try</h3>
         <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
         <ul>
@@ -41,6 +36,9 @@
             <% } %>
         </ul>
     </div>
+    <nav>
+        <h3 class="subtitle is-3"><a href="/restaurants/new">Add a new restaurant</a></h3><br />
+  </nav>
         <!-- THE HEAD TAG PARTIAL -->
         <%- include("../partials/footer") %>
     </body>
