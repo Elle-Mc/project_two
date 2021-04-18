@@ -3,7 +3,11 @@
 - 🍴 **What is it?** An app to track new and old restaurants to try. Never have to worry about answering the question "Where should we go for din?" ever again! With this app, you'll be able to track a restaurant, it's location and any dish you'd like to try. 
 
 - 💭 **What's it look like?**
-| <img src="https://media.wired.com/photos/5926db217034dc5f91becd6b/master/w_582,c_limit/so-logo-s.jpg" width="250"> | <img src="https://mk0jobadderjftub56m0.kinstacdn.com/wp-content/uploads/stackoverflow.com-300.jpg" width="250"> |
+
+    Index page: <img src="https://imgur.com/fl8UlHc" width="250"> <br />
+    Adding a new restaurant page: <img src="TBD" width="250"> <br />
+    Updating an existing restaurant page: <img src="TBD" width="250">
+
 
 - 🤨 **How'd she make it?**
     - JavaScript
@@ -18,3 +22,5 @@
 
 - **Praise for *Where to Dine for Din*:**
     - "Cute. I'd never use it, but cute." - Elle's mom
+
+[Imgur]()
