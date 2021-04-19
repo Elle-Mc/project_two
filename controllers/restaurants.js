@@ -40,7 +40,12 @@ const newRestaurant = async (req, res) => {
 
 const create = async (req, res) => {
     try {
-        const restaurant = new Restaurant({name: req.body.text})
+        console.log(req.body)
+        const restaurant = new Restaurant({
+            name: req.body.name,
+            location: req.body.location,
+            dish: req.body.dish
+        })
         restaurant.save()
         res.redirect("/restaurants")
     } catch (error) {

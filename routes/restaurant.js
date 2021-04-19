@@ -26,7 +26,7 @@ router.delete("/:id", RestaurantController.destroy);
 router.get("/:id/edit", RestaurantController.edit);
 
 //index put "/restaurant"
-router.put("/", RestaurantController.update)
+router.put("/:id", RestaurantController.update)
 
 ////////////////////////////////////////
 // Export the router

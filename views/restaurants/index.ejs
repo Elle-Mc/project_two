@@ -21,13 +21,9 @@
                         <%=restaurants[i].name;%>
                     </a>.
                     It's located at 
-                    <a href="/restaurants/<%=restaurants[i]._id%>">
-                        <%=restaurants[i].location;%>
-                    </a>.
+                        <%=restaurants[i].location;%>.
                     A dish I'd like to try is
-                    <a href="/restaurants/<%=restaurants[i]._id%>">
                         <%=restaurants[i].dish;%>.
-                    </a>
                     <a href="/restaurants/<%=restaurants[i]._id %>/edit">Update</a>
                     <form action="/restaurants/<%=restaurants[i]._id %>?_method=DELETE" method="POST">
                         <input type="submit" value="DELETE"/>
