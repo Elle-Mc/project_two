@@ -14,9 +14,10 @@
 
 
 - 🤨 **How'd she make it?**
-    - JavaScript
+    - JavaScript and EJS
     - CSS
     - Express
+    - Mongoose
 
 - 👀 **How do *I* see it?** [Click here to check out the live app.](https://where-to-dine-for-din.herokuapp.com/)
 

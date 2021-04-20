@@ -14,16 +14,18 @@
 <body>
 <!-- THE HEADER TAG PARTIAL -->
 <%- include("../partials/header") %>
-    <a href="/restaurants">Home</a>
-    <a href="/restaurants">All Restaurants</a>
+    <a href="/restaurants">Home</a><br />
+    <a href="/restaurants">All Restaurants</a><br />
     <h2 class="subtitle is-2">Here's some info on this restaurant</h2>
     <!--  NOTE: the form is pre-populated with values for the server-->
     <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-    <h1>Restaurant <%= restaurant.name %></h1>
-    <h3><%= restaurant.text %></h3>
-  </div>
+    <h1><b>Restaurant:</b> <%= restaurant.name %></h1>
+    <h1><b>Location:</b> <%= restaurant.location %></h1>
+    <h1><b>Dish to try:</b> <%= restaurant.dish %></h1>
+    
+    </div>
     <nav>
-      <a href="/restaurants">Back to the home page</a>
+      <br /><a href="/restaurants">Back to the home page</a><br /><br />
     </nav>
         <!-- THE HEAD TAG PARTIAL -->
         <%- include("../partials/footer") %>
