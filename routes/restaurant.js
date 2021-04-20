@@ -1,7 +1,6 @@
 // Create a new router
 const router  = require("express").Router();
 const RestaurantController = require("../controllers/restaurants");
-const Restaurant = require("../models/Restaurant");
 
 ////////////////////////////////////////
 // Router specific middleware

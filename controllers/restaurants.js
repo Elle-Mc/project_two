@@ -6,7 +6,7 @@ const { model } = require("mongoose");
 const router = express.Router();
 
 //Import restaurant model
-const Restaurant = require("../models/Restaurant.js");
+const Restaurant = require("../models/restaurant.js");
 
 ///////////////////////////////////////
 // Controller functions
