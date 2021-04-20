@@ -19,7 +19,7 @@
     - Express
     - Mongoose
 
-- 👀 **How do *I* see it and use it?** [Click here to check out the live app.](https://where-to-dine-for-din.herokuapp.com/)
+- 👀 **How do *I* see it and use it?** [Click here to check out the live app.](https://where-to-dine-for-din.herokuapp.com/restaurants)
 
 - 🧊 **That's it? What's next?** *The next version of Where to Dine for Din will:*
     1. Include the ability for a user to log in and out to see their list of restaurants to try.
