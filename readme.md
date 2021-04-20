@@ -15,9 +15,10 @@
 
 - 🤨 **How'd she make it?**
     - JavaScript and EJS
-    - CSS
     - Express
     - Mongoose
+    - MongoDB
+    - Bulma CSS Framework
 
 - 👀 **How do *I* see it and use it?** [Click here to check out the live app.](https://where-to-dine-for-din.herokuapp.com/restaurants)
 
